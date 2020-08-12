@@ -1,0 +1,23 @@
+function addTogether(x) {
+  // console.log(x)
+  // return function (y) { return x + y; }
+  let sum = 0;
+  let arr = [].slice.call(arguments);
+  // console.log(arr)
+  if (!arr.every(item => typeof item == 'number'))
+    return undefined
+  if (arr.length == 2)
+    return arr[0] + arr[1]
+
+
+  return function (y) {
+    console.log(typeof y)
+    if (typeof y == 'number')
+      return x + y
+    else
+      return undefined;
+  };
+}
+
+
+addTogether(2)(3);

@@ -1,0 +1,8 @@
+function steamrollArray(arr) {
+  // return arr.flsat(Infinity);
+  let newArr = [].concat(...arr)
+  // chesks for any array in functiion
+  return newArr.some(Array.isArray) ? steamrollArray(newArr) : newArr
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
