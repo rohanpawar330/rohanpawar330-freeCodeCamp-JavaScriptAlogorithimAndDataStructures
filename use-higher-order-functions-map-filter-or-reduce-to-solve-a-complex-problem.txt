@@ -1,0 +1,13 @@
+const squareList = (arr) => {
+  // Only change code below this line
+  let newArray = arr.filter(item => {
+    if (((item - Math.floor(item)) == 0) && item > 0)
+      return item
+  }).map(item => item * item)
+  console.log(newArray)
+  return newArray;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
